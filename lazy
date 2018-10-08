@@ -13,3 +13,7 @@ git config user.email felipe.lipiss@gmail.com
 git add lazy
 git commit -m "add lazy file"
 
+
+if you have problems when pushing changes...
+git fetch
+git reset --hard origin/master
