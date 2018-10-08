@@ -1,6 +1,7 @@
 Install transmission:
 https://raspberryparatorpes.net/proyectos/instalar-y-configurar-un-descargador-de-torrents/
 sudo apt-get install transmission-daemon
+sudo service transmission-daemon stop
 
 
 
@@ -17,3 +18,16 @@ git commit -m "add lazy file"
 if you have problems when pushing changes...
 git fetch
 git reset --hard origin/master
+
+
+
+mount usb drive
+
+ls -l /dev/disk/by-uuid/
+
+
+
+change name to usb drive:
+
+sudo fdisk -l
+sudo mlabel -i /dev/sda1 -s ::"my_usbdrive"
