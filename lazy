@@ -1,0 +1,15 @@
+Install transmission:
+https://raspberryparatorpes.net/proyectos/instalar-y-configurar-un-descargador-de-torrents/
+sudo apt-get install transmission-daemon
+
+
+
+Git notes:
+
+https://stackoverflow.com/questions/11656761/git-please-tell-me-who-you-are-error
+git init
+git config user.name lipiss
+git config user.email felipe.lipiss@gmail.com
+git add lazy
+git commit -m "add lazy file"
+
