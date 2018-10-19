@@ -2,8 +2,12 @@ Install transmission:
 https://raspberryparatorpes.net/proyectos/instalar-y-configurar-un-descargador-de-torrents/
 sudo apt-get install transmission-daemon
 sudo service transmission-daemon stop
+/etc/transmission-daemon/settings.json
 
+sudo nmap -sn 192.168.1.0/24
 
+list all wireless aps:
+sudo iwlist wlan0 scan
 
 Git notes:
 
@@ -29,5 +33,11 @@ ls -l /dev/disk/by-uuid/
 
 change name to usb drive:
 
+https://blog.alexellis.io/attach-usb-storage/
+apt-get install mtools
 sudo fdisk -l
 sudo mlabel -i /dev/sda1 -s ::"my_usbdrive"
+lsblk
+
+
+
