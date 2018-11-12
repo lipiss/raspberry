@@ -3,6 +3,13 @@ https://raspberryparatorpes.net/proyectos/instalar-y-configurar-un-descargador-d
 sudo apt-get install transmission-daemon
 sudo service transmission-daemon stop
 /etc/transmission-daemon/settings.json
+1. Format usb drive as EXT4
+2. Umount usb drive at /media/ and then mount it again at /mnt/2TB for e.g.
+3. modify fstab so that the usb drive is mounted automaticlly at the new path.
+4. Add debian-transmission user to the pi group
+sudo usermod -a -G pi debian-transmission
+sudo blkid
+
 
 sudo nmap -sn 192.168.1.0/24
 
@@ -40,4 +47,22 @@ sudo mlabel -i /dev/sda1 -s ::"my_usbdrive"
 lsblk
 
 
+transmission:
+following https://www.htpcguides.com/install-transmission-raspberry-pi-latest-version-raspbian/
+Add the Transmission user to the pi group which will prevent permission issues as long as you download to hard drives that are owned by the pi group (if you follow my hard drive mounting tutorial then it will work).
+sudo usermod -a -G pi transmission-daemon
+
+
+configure harddisks
+this one worked for me:
+https://raspberryparatorpes.net/proyectos/formatear-disco-en-ext4-preparando-un-nas-o-servidor-casero-1/
+ls -laF /dev/disk/by-uuid/
+sudo umount /dev/sda
+it should say not mounted
+sudo mkfs.ext4 /dev/sda -L 2TB
+
+
+cat /var/log/messages | tail -n 50
+Nov  9 10:03:01 raspberrypi kernel: [40393.564264] sd 0:0:0:0: [sda] 3906963456 512-byte logical blocks: (2.00 TB/1.82 TiB)
+Nov  9 10:03:01 raspberrypi kernel: [40393.564584] sd 0:0:0:0: [sda] Write Protect is off
 
