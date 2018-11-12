@@ -1,3 +1,4 @@
+cata
 Install transmission:
 https://raspberryparatorpes.net/proyectos/instalar-y-configurar-un-descargador-de-torrents/
 sudo apt-get install transmission-daemon
