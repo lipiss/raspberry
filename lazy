@@ -1,5 +1,6 @@
 cata
 Install transmission:
+
 https://raspberryparatorpes.net/proyectos/instalar-y-configurar-un-descargador-de-torrents/
 sudo apt-get install transmission-daemon
 sudo service transmission-daemon stop
@@ -12,10 +13,25 @@ sudo usermod -a -G pi debian-transmission
 sudo blkid
 
 
+transmission command line interface
+transmission-remote-cli -c transmission:pipe@localhost:9091
+
+Install etherwake:
+sudo apt-get install etherwake
+
 sudo nmap -sn 192.168.1.0/24
 
 list all wireless aps:
 sudo iwlist wlan0 scan
+
+bluetooth:
+bluetoothctl
+power on, to make sure Bluetooth is running
+agent on, to make sure Bluetooth is running
+scan on, to start searching for nearby Bluetooth devices
+connect 50:54:B4:45:00:EB
+
+
 
 Git notes:
 
