@@ -83,3 +83,10 @@ cat /var/log/messages | tail -n 50
 Nov  9 10:03:01 raspberrypi kernel: [40393.564264] sd 0:0:0:0: [sda] 3906963456 512-byte logical blocks: (2.00 TB/1.82 TiB)
 Nov  9 10:03:01 raspberrypi kernel: [40393.564584] sd 0:0:0:0: [sda] Write Protect is off
 
+
+edit the hostname of the raspberry pi:
+https://www.howtogeek.com/167195/how-to-change-your-raspberry-pi-or-other-linux-devices-hostname/
+sudo vi /etc/hosts
+sudo vi /etc/hostname
+sudo reboot
+
