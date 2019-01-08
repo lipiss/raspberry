@@ -88,5 +88,66 @@ edit the hostname of the raspberry pi:
 https://www.howtogeek.com/167195/how-to-change-your-raspberry-pi-or-other-linux-devices-hostname/
 sudo vi /etc/hosts
 sudo vi /etc/hostname
+sudo /etc/init.d/hostname.sh
 sudo reboot
+
+
+
+
+
+
+pi@kodi:~/raspberry $ ifconfig
+eth0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether b8:27:eb:a9:8b:f8  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.152  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::3d65:421a:8bed:2504  prefixlen 64  scopeid 0x20<link>
+        ether b8:27:eb:fc:de:ad  txqueuelen 1000  (Ethernet)
+        RX packets 12734  bytes 972520 (949.7 KiB)
+        RX errors 0  dropped 4  overruns 0  frame 0
+        TX packets 22629  bytes 24689937 (23.5 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+pi@ha:~ $ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.153  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::50da:ce55:8d50:3d39  prefixlen 64  scopeid 0x20<link>
+        ether b8:27:eb:a1:2c:db  txqueuelen 1000  (Ethernet)
+        RX packets 529  bytes 60666 (59.2 KiB)
+        RX errors 0  dropped 2  overruns 0  frame 0
+        TX packets 391  bytes 55671 (54.3 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 199  bytes 15944 (15.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 199  bytes 15944 (15.5 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.154  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::4b16:92ac:ae3d:c9dd  prefixlen 64  scopeid 0x20<link>
+        ether b8:27:eb:f4:79:8e  txqueuelen 1000  (Ethernet)
+        RX packets 207  bytes 18566 (18.1 KiB)
+        RX errors 0  dropped 2  overruns 0  frame 0
+        TX packets 185  bytes 22125 (21.6 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
