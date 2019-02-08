@@ -19,7 +19,9 @@ transmission-remote-cli -c transmission:pipe@localhost:9091
 Install etherwake:
 sudo apt-get install etherwake
 
+scan IPs:
 sudo nmap -sn 192.168.1.0/24
+for i in {1..254} ;do (ping 192.168.1.$i -c 1 -w 5  >/dev/null && echo "192.168.1.$i" &) ;done
 
 list all wireless aps:
 sudo iwlist wlan0 scan
@@ -150,4 +152,12 @@ wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         RX errors 0  dropped 2  overruns 0  frame 0
         TX packets 185  bytes 22125 (21.6 KiB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+Xiaomi camera
+telnet 192.168.1.128
+
+Mikrotik router
+tool wol mac=3c:97:0e:8c:dd:93
+A
 
