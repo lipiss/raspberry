@@ -159,5 +159,11 @@ telnet 192.168.1.128
 
 Mikrotik router
 tool wol mac=3c:97:0e:8c:dd:93
-A
 
+MQTT Server:
+/etc/mosquitto/
+
+
+Starting zigbee2mqtt: https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html
+cd /opt/zigbee2mqtt
+npm start
