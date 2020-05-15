@@ -1,5 +1,10 @@
 My lazy:
 
+scp:
+https://haydenjames.io/linux-securely-copy-files-using-scp/
+scp username@from_host:file.txt /local/directory/
+
+
 Install transmission:
 
 https://raspberryparatorpes.net/proyectos/instalar-y-configurar-un-descargador-de-torrents/
@@ -171,5 +176,19 @@ Starting zigbee2mqtt:
 https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html
 cd /opt/zigbee2mqtt
 npm start
-
 view log: sudo journalctl -u zigbee2mqtt.service -f
+
+Mosquitto broker:
+-Subscribe to all messages:
+mosquitto_sub -v -h broker_ip -p 1883 -t '#'
+
+node red:
+http://192.168.1.153:1880/
+
+mqttfx:
+subscribe:
+stat/tasmota/RESULT
+zigbee2mqtt/0x00158d0002c94a1c
+
+publish:
+cmnd/tasmota/POWER TOGGLE
