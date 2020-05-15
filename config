@@ -1,0 +1,7 @@
+Host haw
+    HostName 192.168.1.153
+    User pi
+Host ha
+    HostName 192.168.1.152
+    User pi
+    Port 22

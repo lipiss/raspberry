@@ -25,9 +25,11 @@ sudo nmap -sn 192.168.1.0/24
 for i in {1..254} ;do (ping 192.168.1.$i -c 1 -w 5  >/dev/null && echo "192.168.1.$i" &) ;done
 
 list all wireless aps:
-sudo iwlist wlan0 scan
+sudo iwlist wlp3s0 scan
 
 bluetooth:
+sudo bluetoothctl show
+No default controller available => systemctl start hciuart
 bluetoothctl
 power on, to make sure Bluetooth is running
 agent on, to make sure Bluetooth is running
@@ -165,6 +167,9 @@ MQTT Server:
 /etc/mosquitto/
 
 
-Starting zigbee2mqtt: https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html
+Starting zigbee2mqtt: 
+https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html
 cd /opt/zigbee2mqtt
 npm start
+
+view log: sudo journalctl -u zigbee2mqtt.service -f
