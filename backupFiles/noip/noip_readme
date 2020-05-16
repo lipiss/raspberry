@@ -42,3 +42,11 @@ sudo chmod 755 /etc/init.d/noip.sh
 sudo /etc/init.d/noip.sh start
 sudo /etc/init.d/noip.sh stop
 sudo update-rc.d noip.sh defaults
+host lipiss.hopto.org
+
+
+investigate this way:
+Another option for the script is the native one:
+/home/pi/noip/noip-2.1.9-1/debian.noip2.sh
+At debian this is the way:
+/lib/lsb/init-functions

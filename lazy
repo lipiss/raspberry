@@ -1,5 +1,9 @@
 My lazy:
 
+timezones:
+timedatectl list-timezones
+sudo timedatectl set-timezone Europe/Madrid
+
 scp:
 https://haydenjames.io/linux-securely-copy-files-using-scp/
 scp username@from_host:file.txt /local/directory/
