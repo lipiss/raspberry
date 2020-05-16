@@ -1,0 +1,44 @@
+noipTime.sh
+date>>/home/pi/noip/noip-2.1.9-1/noiplog
+
+https://tutorials-raspberrypi.com/raspberry-pi-autostart-start-program-automatically/
+
+cd /etc/init.d/
+create noip.sh:
+
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides: noip
+# Required-Start: $syslog
+# Required-Stop: $syslog
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: noip server
+# Description:
+### END INIT INFO
+ 
+case "$1" in
+    start)
+        echo "noip is starting"
+        # Starting Programm
+        /usr/local/bin/noip2
+        ;;
+    stop)
+        echo "noip is ending"
+        # Ending Programm
+        killall noip2
+        ;;
+    *)
+        echo "Use: /etc/init.d/noip {start|stop}"
+        exit 1
+        ;;
+esac
+ 
+exit 0
+#end
+
+Test the before script like this:
+sudo chmod 755 /etc/init.d/noip.sh
+sudo /etc/init.d/noip.sh start
+sudo /etc/init.d/noip.sh stop
+sudo update-rc.d noip.sh defaults

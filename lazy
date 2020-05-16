@@ -4,6 +4,8 @@ scp:
 https://haydenjames.io/linux-securely-copy-files-using-scp/
 scp username@from_host:file.txt /local/directory/
 
+passwordless ssh:
+https://www.thegeekdiary.com/centos-rhel-how-to-setup-passwordless-ssh-login/
 
 Install transmission:
 
